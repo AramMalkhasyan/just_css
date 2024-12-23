@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f9f9f9;
+}
+
+.test_hover_button{
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px white inset;
+    }
+}
+
+.checked_text{
+    display: none;
+}
+#myCheckbox{
+    display: none;
+    &:checked ~ .checked_text{
+        display: block;
+    }
+}
+
+
+.resp_conteiner_for_text{
+    background-color: blue;
+    color: white;
+    margin: 0 auto;
+    width: min(800px, 90%);
+}
+
+.blur_conteiner{
+    background-image: url(./background.jpeg);
+    width: 200px;
+    height: 400px;
+}
+
+.blured_part{
+    width: 70%;
+    height: 80%;
+    border: solid black 1px;
+    margin: 0 auto;
+    border-radius: 25px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.button_conteiner{
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    .inner_button{
+        border-radius: 10px;
+        padding: 15px;
+        background-color: blue;
+        color: wheat;
+    }
+    .inner_button:not(:first-child){
+        background-color: red;
+    }
+}
+.gradient_conteiner{
+    width: 300px;
+    .gradient_color{
+        background: linear-gradient(to right, red, blue);
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.wrapper_conteiner{
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    width: 300px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.card{
+    scroll-snap-align: center;
+    padding: 20px 30px;
+    flex-shrink: 0;
+    width: 300px;
+    background-color: grey;
+    border-radius: 14px;
+    text-align: center;
+}
+
